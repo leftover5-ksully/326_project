@@ -30,4 +30,4 @@ For now, we have multiple drafts of some ideas that we'd like to eventually culm
 
 ![Evan's UI](imgs/ShoppingCart_UI2.jpg)
 
-![Kiyanna's UI] (imgs/)
+![Kiyanna's UI] (imgs/Screen Shot 2018-09-27 at 6.25.24 PM.png)
