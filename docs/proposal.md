@@ -26,4 +26,4 @@ For now, we have multiple drafts of some ideas that we'd like to eventually culm
 
 ![map_UI](imgs/map_UI.jpg)
 
-![Harold's UI](imgs/navbar + cart UI)
+![Harold's UI](imgs/navbar+cart_UI.jpg)
