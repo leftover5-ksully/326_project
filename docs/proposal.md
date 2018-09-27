@@ -31,3 +31,5 @@ For now, we have multiple drafts of some ideas that we'd like to eventually culm
 ![Evan's UI](imgs/ShoppingCart_UI2.jpg)
 
 ![Kiyanna's UI](imgs/Kiyanna_Example.jpg)
+
+![Harmon's UI](imgs/HarmonUI.jpg)
