@@ -1,27 +1,26 @@
-# TEAM NAME
+# Team Leftover5
 
-# WEB APPLICATION NAME
+# Shopping Map
 
 # Team Overview
 
-* Team Member Name 1, Github Username 1
-* Team Member Name 2, Github Username 2
-* Team Member Name 3, Github Username 3
-* Team Member Name 4, Github Username 4
-* Team Member Name 5, Github Username 5
+* Mina Bruso, minaalexandra96
+* Harold Rubio, haroldrubio
+* Harmon Lau, hungrygiraffe
+* Kiyanna Sully, leftover5-ksully
+* Evan Geremia, egeremia
 
 # Innovative Idea
 
-Please describe your team's innovative idea for your project.
+Why doesn't there already exist an app that plots the most efficient route for picking up items on your shopping list?? Never run back and forth across the grocery store again, with this handy dandy Shopping Map (tentative title). You can choose your store, add items to your list, and voila! It plots the fastest route for you so you don't have to suffer with all those other annoying shoppers. You can even save your favorite lists for all those weekly essential-item grocery runs. 
 
 # Important Data
 
-Please describe the important data that your application will be managing.
+We'll have different stores to choose from, searchable items for those stores to add to your list, favorite shopping lists, store layouts to create the maps, and user accounts so people can save their preferences.
 
 # User Interface
 
-Provide a description and images of the user interface your
-application will intend on supporting.
+For now, we have multiple drafts of some ideas that we'd like to eventually culminate into one beautiful, user friendly interface. We know the gist of what we want - a search bar for finding items for your shopping list, the list itself, a home menu for saving user data such as favorite lists, and of course the plotted map indicating where the items are on your route.
 
 ![example image](imgs/chick.jpg)
 
