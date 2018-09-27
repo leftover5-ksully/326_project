@@ -24,3 +24,4 @@ For now, we have multiple drafts of some ideas that we'd like to eventually culm
 
 ![example image](imgs/chick.jpg)
 
+![map_UI](imgs/map_UI.jpg)
