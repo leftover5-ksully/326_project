@@ -12,7 +12,7 @@
 
 # Innovative Idea
 
-Why doesn't there already exist an app that plots the most efficient route for picking up items on your shopping list?? Never run back and forth across the grocery store again, with this handy dandy Shopping Map (tentative title). It's like Google Maps, but for stores. You can choose your store, add items to your list, and voila! It plots the fastest route for you so you don't have to suffer with all those other annoying shoppers. You can even save your favorite lists for all those weekly essential-item grocery runs. 
+Why doesn't there already exist an app that plots the most efficient route for picking up items on your shopping list?? With this handy dandy Shopping Map (tentative title) you'll never run back and forth across the grocery store again. It's like Google Maps, but for stores. You can choose your store, add items to your list, and voila! It plots the fastest route for you within the grocery store so you don't have to suffer with all those other annoying shoppers. You can even save your favorite lists for all those weekly essential-item grocery runs. 
 
 # Important Data
 
@@ -29,3 +29,5 @@ For now, we have multiple drafts of some ideas that we'd like to eventually culm
 ![Harold's UI](imgs/navbar+cart_UI.jpg)
 
 ![Evan's UI](imgs/ShoppingCart_UI2.jpg)
+
+![Kiyanna's UI] (imgs/)
