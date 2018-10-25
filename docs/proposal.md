@@ -12,7 +12,7 @@
 
 # Innovative Idea
 
-Why doesn't there already exist an app that plots the most efficient route for picking up items on your shopping list?? With this handy dandy Shopping Map (tentative title) you'll never run back and forth across the grocery store again. It's like Google Maps, but for stores. You can choose your store, add items to your list, and voila! It plots the fastest route for you within the grocery store so you don't have to suffer with all those other annoying shoppers. You can even save your favorite lists for all those weekly essential-item grocery runs. 
+Why doesn't there already exist an app that plots the most efficient route for picking up items on your shopping list?? With this handy dandy Shopping Map Route called "Down the Aisle"! You'll never run back and forth across the grocery store again. It's like Google Maps, but for stores. You can choose your store, add items to your list, and voila! It plots the fastest route for you within the grocery store so you don't have to suffer with all those other annoying shoppers. You can even save your favorite lists for all those weekly essential-item grocery runs. 
 
 # Important Data
 
