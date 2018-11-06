@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid d-flex justify-content-between">
         <a class="navbar-brand"><span class="text-light"></span></a>
@@ -42,14 +43,14 @@
              6.00,12.00 22.00,12.00 22.00,12.00 Z"/>
                         </svg>
                     </a> <!-- URL goes in href! -->
+                    <a href = "{% url 'stores' %}"
+                      class="btn btn-outline-success py-2 d-none d-md-inline-block"
+                      role="button"
+                      style="margin:10px;">Stores</a> <!-- URL goes in href! -->
                     <a href="{% url 'signin' %}"
                        class="btn btn-outline-success py-2 d-none d-md-inline-block"
                        role="button"
                        style="margin:10px;">Login</a> <!-- URL goes in href! -->
-                    <a href="{% url 'store_items' %}"
-                       class="btn btn-outline-success py-2 d-none d-md-inline-block"
-                       role="button"
-                       style="margin:10px;">Items</a> <!-- URL goes in href! -->
                     <a href="{% url 'map' %}"
                        class="btn btn-outline-success py-2 d-none d-md-inline-block"
                        role="button"

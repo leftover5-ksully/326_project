@@ -1,4 +1,5 @@
 from django.shortcuts import render
+
 from shop.models import Item, List, UserModel, Store
 from django.views import generic
 
@@ -29,6 +30,15 @@ def favorite_cart(request):
     user = UserModel.objects.filter(username__exact="defaultUser")
     context = {"user": user}
     return render(request, "favorite_cart.html", context=context)
+
+
+class StoreListView(generic.ListView):
+    model = Store
+    template_name = "store_list.html"
+
+class StoreDetailView(generic.DetailView):
+    model = Store
+    template_name = "items_cart.html"
 
 def favorite_items(request):
     user = UserModel.objects.filter(username__exact="defaultUser")

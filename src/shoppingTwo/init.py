@@ -1,7 +1,6 @@
 import textwrap
 from datetime import timedelta
 
-# Create a super user to use the admin site.
 # #from django.contrib.auth.models import User
 
 from faker import Faker
@@ -12,33 +11,46 @@ fake = Faker()
 
 
 userList = List(listname="userList")
-store = Store(storename="defaultStore")
 userList.save()
-store.save()
-# Create stores
-for i in range(0, 20):
-    storename = fake.text(20)
-    storeStore = Store(
-        storename=storename
-    )
-    storeStore.save()
 
+#Create stores
+stores = []
+for i in range(1, 10):
+    s_name = fake.text(50)
+    s_location = fake.text(10)
+    store = Store(name=s_name,
+                  location=s_location
+                  )
+    store.save()
+    stores.append(store);
 
-# Create items and add to lists
+#Create items
 items = []
-for i in range(0, 100):
-    i_name = fake.text(10)
-    i_quantity = fake.random_int(100)
-    i_aisle = fake.random_int(10)
-    i_price = fake.random_int(50)
-    item = Item(
-        name=i_name, quantity=i_quantity, aisle=i_aisle, price=i_price
-    )
+for i in range(1, 10):
+    i_name = fake.text(50)
+    i_store = stores[fake.random_int(0, len(stores))-1]
+    i_price = fake.random_int(1,100)
+    i_aisle = fake.random_int(1,26)
+    i_short_description = fake.text(150)
+    i_item_number = fake.random_int(1,126)
+    item = Item(name = i_name,
+                store = i_store,
+                price = i_price,
+                aisle = i_aisle,
+                short_description = i_short_description,
+                item_number = i_item_number,
+                )
     item.save()
-    store.items.add(item)
-    if i < 50:
-        userList.item.add(item)
-    items.append(item)
+    userList.item.add(item)
+    items.append(store);
+
+print("\nStore:")
+for i in Store.objects.all():
+    print(i)
+
+print("\nItem:")
+for i in Item.objects.all():
+    print(i)
 
 
 # Take the first 50 items and put it into a list of
@@ -46,13 +58,19 @@ user = UserModel(username="defaultUser", favoriteCart=userList)
 user.save()
 # Make 10 favorite items
 for i in range(0, 10):
-    i_name = fake.text(10)
-    i_quantity = fake.random_int(100)
-    i_aisle = fake.random_int(10)
-    i_price = fake.random_int(50)
-    item = Item(
-        name=i_name, quantity=i_quantity, aisle=i_aisle, price=i_price
-    )
+    i_name = fake.text(50)
+    i_store = stores[fake.random_int(0, len(stores))-1]
+    i_price = fake.random_int(1,100)
+    i_aisle = fake.random_int(1,26)
+    i_short_description = fake.text(150)
+    i_item_number = fake.random_int(1,126)
+    item = Item(name = i_name,
+                store = i_store,
+                price = i_price,
+                aisle = i_aisle,
+                short_description = i_short_description,
+                item_number = i_item_number,
+                )
     item.save()
     user.favoriteItems.add(item)
     user.save()

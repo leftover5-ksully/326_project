@@ -1,0 +1,28 @@
+{% extends "base_generic.html" %}
+{% block content %}
+  <h1>{{ store }}</h1>
+  <h3>Add Items to Cart</h3>
+
+  <div style="margin-left:20px;margin-top:20px">
+    <form class="form-inline">
+       <ul>
+       <h4 style="margin:10px">All Items</h4>
+       {% for item in store.item_set.all %}
+         <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>{{item.name}} {{item.price}}</a> </button>
+       {% endfor %}
+       </ul>
+       <ul class="Cart List" style="margin:10px;">
+          <h4 style="margin:10px">Cart List</h4>
+          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Deli Meat</a> </button>
+          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Deli Cheese</a> </button>
+          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Milk</a> </button>
+          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Perscription</a> </button>
+          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Fruit</a> </button>
+          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Ice Cream</a> </button>
+          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Cereal</a> </button>
+       </ul>
+     </form>
+  </div>
+  <script src="items_cart.js"></script>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Select a Store</h1>
+
+{% if store_list %}
+<ul>
+  {% for store in store_list %}
+    <li class="list-group-item", style="margin:10px;"> <a href="{{ store.get_absolute_url }}">{{ store }}</a> </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>There are no stores matching your search (?).</p>
+{% endif %}
+{% endblock %}

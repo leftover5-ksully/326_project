@@ -14,10 +14,10 @@
     <div class="container">
         {% for store in store_list %}
             <div class="col-lg-2 justify-center">
-                <button class="btn btn-success btn-block">{{ store.storename }}</button>
+                <button class="btn btn-success btn-block">{{ store.name }}</button>
             </div>
             <div class="col-lg-10">
-                <h6>{{ store.storename }}
+                <h6>{{ store.name }}
                     <small> is a national supermarket chain that has your back when you're craving your favorite
                         foods.
                     </small>
@@ -25,7 +25,6 @@
             </div>
             <hr class="my-5">
         {% endfor %}
-        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
