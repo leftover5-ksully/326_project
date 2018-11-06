@@ -19,27 +19,33 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 	<div class="navbar-nav">
 	  <form class="form-inline">
-	    <a href = "#"
-            class="btn btn-outline-success my-2 my-sm-0"
-		    role="button"
+
+    <a href = "#"
+      class="btn btn-outline-success my-2 my-sm-0"
+		  role="button"
 			style="margin:10px;">Homepage</a> <!-- URL goes in href! -->
-	    <a href = "#"
-            class="btn btn-outline-success my-2 my-sm-0"
-		    role="button"
+
+    <a href = "#"
+      class="btn btn-outline-success my-2 my-sm-0"
+		  role="button"
 			style="margin:10px;">Login</a> <!-- URL goes in href! -->
-		<a href = "#"
-            class="btn btn-outline-success my-2 my-sm-0"
+
+		<a href = "{% url 'stores' %}"
+      class="btn btn-outline-success my-2 my-sm-0"
 			role="button"
-			style="margin:10px;">Items</a> <!-- URL goes in href! -->
-        <a href = "#"
-            class="btn btn-outline-success my-2 my-sm-0"
+			style="margin:10px;">Stores</a> <!-- URL goes in href! -->
+
+    <a href = "#"
+      class="btn btn-outline-success my-2 my-sm-0"
 			role="button"
 			style="margin:10px;">Map</a> <!-- URL goes in href! -->
-        <a href = "#"
-            class="btn btn-outline-success my-2 my-sm-0"
+
+    <a href = "#"
+      class="btn btn-outline-success my-2 my-sm-0"
 			role="button"
 			style="margin:10px;">My Profile</a> <!-- URL goes in href! -->
-	  </form>
+
+    </form>
 	</div>
       </div>
     </nav>
@@ -47,6 +53,8 @@
 
 
     {% block content %}{% endblock %}
+    <script src="items_cart.js"></script>
+    
 </body>
 
 </html>
