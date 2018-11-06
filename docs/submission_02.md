@@ -1,10 +1,19 @@
-Overview of Application: 
+# Overview of Application
 
-Team Members:
 
-Video Link:
+# Team Members
+Mina Bruso, minaalexandra96
+Harold Rubio, haroldrubio
+Harmon Lau, hungrygiraffe
+Kiyanna Sully, leftover5-ksully
+Evan Geremia, egeremia
 
-Design Overview:
 
-Problems/Successes:
+# Video Link
+Here is our youtube link to our demo video: 
+
+# Design Overview
+
+
+# Problems/Successes
 
