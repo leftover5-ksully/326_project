@@ -1,0 +1,93 @@
+{% extends "base_generic.html" %}
+
+
+{% block title %}<title>Local Library</title>
+ 
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    
+	<div class="container">
+		<div class="row bg-dark mb-4 my-4 text-white">
+			<h2>User Page</h2>
+		</div>
+		
+		<div class="row">
+			<!-- side nav-->
+			<aside class="col-sm-6 col-md-3 card  my-4">
+				<h3>Company Name</h3>
+				<hr/>
+				<ul>
+					<li>
+						<a href="#" class="active"> 
+							<span class="fa fa-gear"></span>
+							General settings
+						</a>
+					</li>
+					<li> 
+						<a href="#">
+							<span class="fa fa-wrench"></span>
+							Statistics
+						</a>
+					</li>
+				</ul>
+			</aside>
+			
+			
+			<!-- main content -->
+			<section class="col-sm-6 col-md-8 offset-md-1" id="main-content">
+				<h3 class="pull-right mb-4">General settings</h3>
+				<form method="" action="" class="container">
+					
+					<div class="input-group mb-5">
+						<div class="col-sm-6 col-md-12 h6">Email</div>
+						<div class="input-group-prepend">
+						   
+							<span class="input-group-text" id="basic-addon1">Change Email</span>
+						</div>
+						<input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
+					</div>
+					
+					<div class="input-group mb-5">
+						<div class="col-sm-6 col-md-12 h6">Password</div>
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1">Change Email</span>
+						</div>
+						<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+					</div>
+					
+					
+				<div>
+	                <label for="notifications">Email Notifications</label>
+                    <span id="notifications" class="form-text text-muted">
+                        Choose which email updates you receive
+                    </span>
+                    
+                    <div class="col-sm-6 my-4">
+                        <div>
+                            <label class="btn btn-primary">
+                            <input type="checkbox" autocomplete="off"> Upcoming Sales
+                        </div>
+                        <div>
+                            <label class="btn btn-warning">
+                            <input type="checkbox" checked autocomplete="off"> Discounts
+                        </div>
+                        <div>
+                            <label class="btn btn-danger">
+                            <input type="checkbox"utocomplete="off"> security
+                        </div>
+                    </div>
+         
+	            </div>
+                
+               
+	        </form>
+	      
+            <button type="button" class="btn btn-success btn-lg btn-block my-4 mb-4 ">Save changes</button>
+			</section>
+		</div>
+	</div>
+{% endblock %}

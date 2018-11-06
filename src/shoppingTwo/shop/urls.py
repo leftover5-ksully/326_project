@@ -25,6 +25,8 @@ urlpatterns += [
     path("stores/", views.StoreListView.as_view(), name="stores"),
     path("item_cart/<int:pk>", views.StoreDetailView.as_view(), name="items_cart"),
     path('profile/favoriteItems', views.favorite_items, name="favorite_items"),
+    path('profile/favoriteItems2', views.favorite_items2, name="favorite_items2"),
+    path('profile/user_preferences', views.user_preferences, name="user_preferences")
 ]
 
 urlpatterns += [

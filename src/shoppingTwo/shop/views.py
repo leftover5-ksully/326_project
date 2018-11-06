@@ -44,3 +44,13 @@ def favorite_items(request):
     user = UserModel.objects.filter(username__exact="defaultUser")
     context = {"user": user}
     return render(request, "favorite_items.html", context=context)
+    
+def favorite_items2(request):
+    user = UserModel.objects.filter(username__exact="defaultUser")
+    context = {"user": user}
+    return render(request, "Stats2.html", context=context)
+
+def user_preferences(request):
+    user = UserModel.objects.filter(username__exact="defaultUser")
+    context = {"user": user}
+    return render(request, "user_preferences.html", context=context)
