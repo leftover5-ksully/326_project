@@ -11,12 +11,16 @@
         <p class="lead">
         </p>
     </div>
+    <h2>
+        Available Stores
+    </h2>
+
     <div class="container">
         {% for store in store_list %}
-            <div class="col-lg-2 justify-center">
+            <div class="col-lg-4 justify-center">
                 <button class="btn btn-success btn-block">{{ store.name }}</button>
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-8">
                 <h6>{{ store.name }}
                     <small> is a national supermarket chain that has your back when you're craving your favorite
                         foods.
