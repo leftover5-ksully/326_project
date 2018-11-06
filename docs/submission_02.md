@@ -10,7 +10,7 @@ Our application "Down the Aisle" effectively will allow users to login, select t
 
 
 # Video Link
-Here is our youtube link to our demo video: 
+Here is our youtube link to our demo video: https://youtu.be/SQGc5OGcEoQ
 
 # Design Overview
 We implemented Item, List, UserModel, and Store in our models.py file which each represent a part of our data model we drew. The Item model defines an item that will be displayed after clicking a store. It has its own atributes that define what it is and what price it is. A Store model has a name and Item models associated with it that will be displayed to the user. The List model has many Item models associated with it and will be displayed to the user when they want to see their shopping cart. Finally, the UserModel model has a username and their favorite store and favorite cart as attributes. Our major urls inlcude the four buttons on our navbar: Login, Stores, Map, MyProfile. There is also a shopping cart logo that takes you to the homepage where you can select a store. Also, in MyProfile, the urls for the user's favorite cart and items fucntion and display mock data.
