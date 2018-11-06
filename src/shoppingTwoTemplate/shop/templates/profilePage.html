@@ -1,0 +1,41 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    {% for u in user %}
+        <div class="jumbotron">
+            <h3 class="display-4">Welcome {{ u.username }}!</h3>
+            <p class="lead">Find your favorite items and make your regular grocery lists here!</p>
+        </div>
+        <div class="container-fluid d-flex justify-content-between">
+            <div class="d-flex flex-column bg-light col-lg-3">
+                <div class="card">
+                    <div class="card-body" style="height: 11rem;">
+                        <h5 class="card-title">User Settings</h5>
+                        <p class="card-text">Change your account settings</p>
+                        <a href="#" class="card-link">Reset your password</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column bg-light col-lg-3">
+                <div class="card">
+                    <div class="card-body" style="height: 11rem;">
+                        <h5 class="card-title">Favorite Items</h5>
+                        <p class="card-text">Find out which items you've added to your favorites</p>
+                        <a href="favoriteItems" class="card-link">List of favorite items</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column bg-light col-lg-3">
+                <div class="card">
+                    <div class="card-body" style="height: 11rem;">
+                        <h5 class="card-title">Frequented Carts</h5>
+                        <p class="card-text">See the grocery lists that you use regularly</p>
+                        <a href="favoriteCart" class="card-link">Favorite carts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
