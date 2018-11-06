@@ -1,22 +1,36 @@
 from django.shortcuts import render
-from shop.models import Store, Item
+
+from shop.models import Item, List, UserModel, Store
 from django.views import generic
+
 # Create your views here.
 
-def homepage(request):
-    return render(request, "homepage.html")
+class homepage(generic.ListView):
+    model = Store
+    template_name = "homepage.html"
 
-def cartOne(request):
-    return render(request, "homepage.html")
+def store_items(request):
+    store = Store.objects.filter(storename__exact="defaultStore")
+    context = {"store" : store}
+    return render(request, "store_items.html", context=context)
 
-def cartTwo(request):
-    return render(request, "homepage.html")
+def profile(request):
+    user = UserModel.objects.filter(username__exact="defaultUser")
+    context = {"user": user}
+    return render(request, "profilePage.html", context=context)
 
-def cartThree(request):
-    return render(request, "homepage.html")
+class map(generic.ListView):
+    model = Store
+    template_name = "map.html"
 
-def map(request):
-    return render(request, "homepage.html")
+def signin(request):
+    return render(request, "signin.html")
+
+def favorite_cart(request):
+    user = UserModel.objects.filter(username__exact="defaultUser")
+    context = {"user": user}
+    return render(request, "favorite_cart.html", context=context)
+
 
 class StoreListView(generic.ListView):
     model = Store
@@ -25,3 +39,8 @@ class StoreListView(generic.ListView):
 class StoreDetailView(generic.DetailView):
     model = Store
     template_name = "items_cart.html"
+
+def favorite_items(request):
+    user = UserModel.objects.filter(username__exact="defaultUser")
+    context = {"user": user}
+    return render(request, "favorite_items.html", context=context)

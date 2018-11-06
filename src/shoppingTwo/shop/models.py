@@ -34,3 +34,12 @@ class Item(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.name}, {self.item_number}'
+
+class List(models.Model):
+    listname = models.CharField(max_length=100, default="DEFAULT")
+    item = models.ManyToManyField(Item)
+
+class UserModel(models.Model):
+    username = models.CharField(max_length=100, default="DEFAULT")
+    favoriteCart = models.ForeignKey(List, on_delete=models.SET_NULL, null=True)
+    favoriteItems = models.ManyToManyField(Item)
