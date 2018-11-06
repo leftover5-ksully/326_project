@@ -1,5 +1,5 @@
 # Overview of Application
-Our application "Down the Asile" effectively will allow users to login, select the store they want to make a shopping list for, be able to search for the items they want, put them into their cart, and finally generate a map showing where each item is and the fastest route to get it. 
+Our application "Down the Asile" effectively will allow users to login, select the store they want to make a shopping list for, be able to search for the items they want, put them into their cart, and finally generate a map showing where each item is and the fastest route to get it. Our layout will be designed so that the navigation bar is simple and gets you where you need to go. Selecting what store you want then loading the item data for that store will be simple, smooth, and easy process for the user. Moving items to your cart will provide easy flexibility and usability (when dealing with multiple of the same item, deleting items from cart, etc.). Checking out and getting a map based on your shopping cart will be very useful and one of the main attractions to our application for users. 
 
 # Team Members
 * Mina Bruso, minaalexandra96
