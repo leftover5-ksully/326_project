@@ -2,11 +2,11 @@
 
 
 # Team Members
-Mina Bruso, minaalexandra96
-Harold Rubio, haroldrubio
-Harmon Lau, hungrygiraffe
-Kiyanna Sully, leftover5-ksully
-Evan Geremia, egeremia
+! Mina Bruso, minaalexandra96
+! Harold Rubio, haroldrubio
+! Harmon Lau, hungrygiraffe
+! Kiyanna Sully, leftover5-ksully
+! Evan Geremia, egeremia
 
 
 # Video Link
