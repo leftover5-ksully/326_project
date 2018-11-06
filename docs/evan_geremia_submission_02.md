@@ -4,4 +4,4 @@ learning from teammates and the examples presented in class. This involves mappi
 I also contributed with various github orginization problems and had a significant contribution to 
 the team write-up portion. This included an overview of the project as well as a write up of what went well and what needs to be imporved on.
 
-Lastly I helped get the youtube video organized in time for the project submission. This included ...
+Lastly I helped get the youtube video organized in time for the project submission. This included part of the voiceover and decision on what to say in the voiceover. 
