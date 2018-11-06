@@ -16,4 +16,4 @@ Here is our youtube link to our demo video:
 
 
 # Problems/Successes
-
+We have run into some coordination issues trying to get everyone together to work on the project submission. This is due to the time of year being very busy for everyone and it's hard for schedules to line up. However, we were able to successfully implement a django project using the example in class as a guideline and going from there. There were a lot of times where everyone felt lost but we leaned on each other for support and helped each other deepen their understanding. In the future, we all will need to put more priority on this project as it will require even more time and effort to get it into a presentable form. 
