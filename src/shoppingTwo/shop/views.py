@@ -15,9 +15,9 @@ def store_items(request):
     return render(request, "store_items.html", context=context)
 
 def profile(request):
-    user = UserModel.objects.filter(username__exact="defaultUser")
-    context = {"user": user}
-    return render(request, "profilePage.html", context=context)
+    #user = UserModel.objects.filter(username__exact="defaultUser")
+    #context = {"user": user}
+    return render(request, "profilePage.html")
 
 class map(generic.ListView):
     model = Store
@@ -27,10 +27,13 @@ def signin(request):
     return render(request, "signin.html")
 
 def favorite_cart(request):
-    user = UserModel.objects.filter(username__exact="defaultUser")
-    context = {"user": user}
-    return render(request, "favorite_cart.html", context=context)
-
+    if request.user.is_authenticated:
+        userM = UserModel.objects.filter(user__exact=request.user)
+        user = request.user
+        context = {"userM": userM,
+                   "user": user}
+        return render(request, "favorite_cart.html", context=context)
+    return render(request, "login_error.html")
 
 class StoreListView(generic.ListView):
     model = Store
@@ -41,16 +44,31 @@ class StoreDetailView(generic.DetailView):
     template_name = "items_cart.html"
 
 def favorite_items(request):
-    user = UserModel.objects.filter(username__exact="defaultUser")
-    context = {"user": user}
-    return render(request, "favorite_items.html", context=context)
+    if request.user.is_authenticated:
+        userM = UserModel.objects.filter(user__exact=request.user)
+        user = request.user
+        context = {"userM": userM,
+                   "user": user}
+        return render(request, "favorite_items.html", context=context)
+    return render(request, "login_error.html")
     
 def favorite_items2(request):
-    user = UserModel.objects.filter(username__exact="defaultUser")
-    context = {"user": user}
-    return render(request, "Stats2.html", context=context)
+    if request.user.is_authenticated:
+        userM = UserModel.objects.filter(user__exact=request.user)
+        user = request.user
+        context = {"userM": userM,
+                   "user": user}
+        return render(request, "Stats2.html", context=context)
+    return render(request, "login_error.html")
 
 def user_preferences(request):
-    user = UserModel.objects.filter(username__exact="defaultUser")
-    context = {"user": user}
-    return render(request, "user_preferences.html", context=context)
+    if request.user.is_authenticated:
+        userM = UserModel.objects.filter(user__exact=request.user)
+        user = request.user
+        context = {"userM": userM,
+                   "user": user}
+        return render(request, "user_preferences.html", context=context)
+    return render(request, "login_error.html")
+
+def login_error(request):
+    return render(request, "login_error.html")
