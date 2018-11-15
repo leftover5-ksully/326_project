@@ -29,5 +29,9 @@ urlpatterns += [
 ]
 
 urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
+
+urlpatterns += [
     path('', RedirectView.as_view(url='/shop/')),
 ]

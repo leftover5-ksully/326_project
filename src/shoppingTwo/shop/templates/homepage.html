@@ -10,10 +10,11 @@
         <p>Tell us what's on your grocery list and we'll show you the best way to get around</p>
         <p class="lead">
         </p>
-    </div><h2>
-            Available Stores
-        </h2>
+    </div>
     <div class="container">
+        <div class="col-lg-12 justify-left">
+            <h1 class="">Available Stores</h1>
+        </div>
         {% for store in store_list %}
             <div class="col-lg-4 justify-center">
                 <button class="btn btn-success btn-block">{{ store.name }}</button>

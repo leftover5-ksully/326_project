@@ -53,32 +53,6 @@ for i in Item.objects.all():
     print(i)
 
 
-# Take the first 50 items and put it into a list of
-user = UserModel(username="defaultUser", favoriteCart=userList)
-user.save()
-# Make 10 favorite items
-for i in range(0, 10):
-    i_name = fake.text(50)
-    i_store = stores[fake.random_int(0, len(stores))-1]
-    i_price = fake.random_int(1,100)
-    i_aisle = fake.random_int(1,26)
-    i_short_description = fake.text(150)
-    i_item_number = fake.random_int(1,126)
-    item = Item(name = i_name,
-                store = i_store,
-                price = i_price,
-                aisle = i_aisle,
-                short_description = i_short_description,
-                item_number = i_item_number,
-                )
-    item.save()
-    user.favoriteItems.add(item)
-    user.save()
-
-for g in user.favoriteItems.all():
-    print(g)
-
-
 username = "admin"
 password = "admin"
 email = "admin@326.edu"
@@ -105,3 +79,43 @@ Run the django server with:
 ====================================================================
 """
 print(message)
+
+users = []
+userOuter = []
+for i in range(0, 10):
+    firstname = fake.first_name()
+    lastname = fake.last_name()
+    username = firstname.lower()[0] + lastname.lower()
+    email = f"{username}@326.edu"
+    password = lastname
+    user = User.objects.create_user(username, email, password)
+    user.first_name = firstname
+    user.last_name = lastname
+    user.save()
+    users.append(user)
+    if i == 0:
+        userOuter = UserModel(user=user, favoriteCart=userList)
+        userOuter.save()
+    print(f"  username: {username}, password: {password}")
+
+# Take the first 50 items and put it into a list of
+
+# Make 10 favorite items
+
+for i in range(0, 10):
+    i_name = fake.text(50)
+    i_store = stores[fake.random_int(0, len(stores))-1]
+    i_price = fake.random_int(1,100)
+    i_aisle = fake.random_int(1,26)
+    i_short_description = fake.text(150)
+    i_item_number = fake.random_int(1,126)
+    item = Item(name = i_name,
+                store = i_store,
+                price = i_price,
+                aisle = i_aisle,
+                short_description = i_short_description,
+                item_number = i_item_number,
+                )
+    item.save()
+    userOuter.favoriteItems.add(item)
+    userOuter.save()

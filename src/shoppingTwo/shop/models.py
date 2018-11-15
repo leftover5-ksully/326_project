@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 class Store(models.Model):
     name = models.CharField(max_length=100)
@@ -40,6 +41,10 @@ class List(models.Model):
     item = models.ManyToManyField(Item)
 
 class UserModel(models.Model):
-    username = models.CharField(max_length=100, default="DEFAULT")
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        primary_key=True,
+    )
     favoriteCart = models.ForeignKey(List, on_delete=models.SET_NULL, null=True)
     favoriteItems = models.ManyToManyField(Item)

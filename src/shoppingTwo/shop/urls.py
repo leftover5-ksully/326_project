@@ -36,3 +36,7 @@ urlpatterns += [
 urlpatterns += [
     path('signin/', views.signin, name="signin"),
 ]
+
+urlpatterns += [
+    path('login_error/', views.login_error, name="login_error"),
+]

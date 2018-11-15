@@ -1,13 +1,16 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-    {% for u in user %}
+{% if user.is_authenticated %}
+    {% for u in userM %}
+
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="card bg-light">
                         <div class="card-body bg-muted">
-                            <h3 class="text-center">{{ u.username }}'s Favorite Items</h3>
+                            <h3 class="text-center">{{ u.user.get_username }}'s Favorite Items</h3>
                             <ul class="list-group list-group-flush" id="itemList">
                                 <li class="list-group-item text-center" onclick="removeItem(this)">
                                     <div class="container">
@@ -50,5 +53,7 @@
                 </div>
             </div>
         </div>
+
     {% endfor %}
+    {% endif %}
 {% endblock %}
