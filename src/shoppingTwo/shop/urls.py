@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.contrib import admin
+
 
 urlpatterns = [
     path("", views.homepage.as_view(), name="homepage")
@@ -40,3 +42,5 @@ urlpatterns += [
 urlpatterns += [
     path('login_error/', views.login_error, name="login_error"),
 ]
+
+urlpatterns += [path("admin/", admin.site.urls)]
