@@ -14,6 +14,14 @@ urlpatterns += [
 ]
 
 urlpatterns += [
+    path('addItem/', views.addItem, name="addItem"),
+]
+
+urlpatterns += [
+    path('addItem/success/', views.addItem_success , name="addItem_success"),
+]
+
+urlpatterns += [
     path('profile/', views.profile, name="profile"),
 ]
 
