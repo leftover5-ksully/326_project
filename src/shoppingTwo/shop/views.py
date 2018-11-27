@@ -1,7 +1,11 @@
 from django.shortcuts import render
-
+from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import permission_required
 from shop.models import Item, List, UserModel, Store
+from shop.forms import AddItemForm
 from django.views import generic
+from faker import Faker
+
 
 # Create your views here.
 
@@ -72,3 +76,57 @@ def user_preferences(request):
 
 def login_error(request):
     return render(request, "login_error.html")
+
+@permission_required('shop.can_add_items')
+def addItem(request):
+    fake = Faker()
+    if request.user.is_authenticated:
+        userM = UserModel.objects.filter(user__exact=request.user)
+        user = request.user
+        context = {"userM": userM,
+                   "user": user}
+        if request.method == 'POST':
+            form = AddItemForm(request.POST)
+            if form.is_valid():
+                fakeStore = Store(name=fake.text(50), location=fake.text(10))
+                fakeStore.save()
+                i_name = form.cleaned_data['new_item']
+                i_store = fakeStore
+                i_price = fake.random_int(1, 100)
+                i_aisle = fake.random_int(1, 26)
+                i_short_description = fake.text(150)
+                i_item_number = fake.random_int(1, 126)
+                item = Item(name=i_name,
+                            store=i_store,
+                            price=i_price,
+                            aisle=i_aisle,
+                            short_description=i_short_description,
+                            item_number=i_item_number,
+                            )
+                item.save()
+                userM[0].favoriteItems.add(item)
+                userM[0].save()
+                return HttpResponseRedirect('success/')
+        else:
+            fakeStore = Store(name=fake.text(50), location=fake.text(10))
+            fakeStore.save()
+            i_name = fake.text(50)
+            i_store = fakeStore
+            i_price = fake.random_int(1, 100)
+            i_aisle = fake.random_int(1, 26)
+            i_short_description = fake.text(150)
+            i_item_number = fake.random_int(1, 126)
+            def_item = Item(name=i_name,
+                        store=i_store,
+                        price=i_price,
+                        aisle=i_aisle,
+                        short_description=i_short_description,
+                        item_number=i_item_number,
+                        )
+
+            form = AddItemForm(initial={'new_item': def_item,})
+        return render(request, "addItem.html", {'form': form})
+    return render(request, "login_error.html")
+
+def addItem_success(request):
+    return render(request, "success.html")

@@ -1,14 +1,19 @@
 import textwrap
 from datetime import timedelta
 
-# #from django.contrib.auth.models import User
-
+#from django.contrib.auth.models import User
+from django.contrib.auth.models import Group, Permission
+from django.contrib.contenttypes.models import ContentType
 from faker import Faker
 from django.contrib.auth.models import User, Group, Permission
 from shop.models import Item, List, Store, UserModel
 
 fake = Faker()
 
+consumer, created = Group.objects.get_or_create(name='consumer')
+ct = ContentType.objects.get_for_model(UserModel)
+can_add_items = Permission.objects.create(codename='can_add_items', name='Can Add Items', content_type=ct)
+consumer.permissions.add(can_add_items)
 
 userList = List(listname="userList")
 userList.save()
@@ -91,15 +96,17 @@ for i in range(0, 10):
     user = User.objects.create_user(username, email, password)
     user.first_name = firstname
     user.last_name = lastname
+    #user.user_permissions.add(can_add_items)
+    if(i == 9):
+        consumer.user_set.add(user)
     user.save()
     users.append(user)
-    if i == 0:
-        userOuter = UserModel(user=user, favoriteCart=userList)
-        userOuter.save()
+    userOuter = UserModel(user=user, favoriteCart=userList)
+    userOuter.save()
     print(f"  username: {username}, password: {password}")
 
 # Take the first 50 items and put it into a list of
-
+print('^ This user can modify his/her own favorite items list')
 # Make 10 favorite items
 
 for i in range(0, 10):

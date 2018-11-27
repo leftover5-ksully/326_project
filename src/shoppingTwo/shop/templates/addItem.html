@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+{% block content %}
+    <body class="text-center">
+    <div class="container">
+        <div class="col-lg-12"><p class="lead text-center display-4">Enter a new item</p></div>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <hr>
+            <button class="btn btn-lg btn-primary" type="submit" value="login">Add to Favorites</button>
+        </form>
+    </div>
+    </body>
+{% endblock %}
