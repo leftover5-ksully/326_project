@@ -2,6 +2,8 @@
 
 TODO: The graphs page is broken! Yay!
 
+NOTE: Our main project with `init.sh` is in `src/shoppingTwo`
+
 This is the project repository template that your COMPSCI 326 team
 will `fork` and use to begin your semester project work. Please follow
 the instructions carefully in each of the project submission
