@@ -63,11 +63,12 @@ password = "admin"
 email = "admin@326.edu"
 adminuser = User.objects.create_user(username, email, password)
 adminuser.save()
-adminuser.is_superuser = True
-adminuser.is_staff = True
 adminuserM = UserModel(user=adminuser, favoriteCart=userList)
 adminuserM.save()
 consumer.user_set.add(adminuser)
+adminuser.is_superuser = True
+adminuser.is_staff = True
+adminuser.save()
 message = f"""
 ====================================================================
 The database has been setup with the following credentials:
