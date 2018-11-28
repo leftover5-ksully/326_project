@@ -1,0 +1,1 @@
+For this project, I added functionality to the login page and made the user-specific navbar elements only appear when logged in and designed a corresponding logout page. I created a group that allows a user to modify his/her own favorites cart. I also created and designed the form that allows the user to modify the Django model.
