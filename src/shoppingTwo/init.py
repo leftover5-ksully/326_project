@@ -5,7 +5,7 @@ from datetime import timedelta
 from django.contrib.auth.models import Group, Permission
 from django.contrib.contenttypes.models import ContentType
 from faker import Faker
-from django.contrib.auth.models import User, Group, Permission
+from django.contrib.auth.models import User
 from shop.models import Item, List, Store, UserModel
 
 fake = Faker()
@@ -65,7 +65,9 @@ adminuser = User.objects.create_user(username, email, password)
 adminuser.save()
 adminuser.is_superuser = True
 adminuser.is_staff = True
-adminuser.save()
+adminuserM = UserModel(user=adminuser, favoriteCart=userList)
+adminuserM.save()
+consumer.user_set.add(adminuser)
 message = f"""
 ====================================================================
 The database has been setup with the following credentials:
