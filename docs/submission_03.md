@@ -11,7 +11,7 @@ Our application "Down the Aisle" effectively will allow users to login, select t
 
 
 # Video Link
-Here is our youtube link to our demo video: 
+Here is our youtube link to our demo video: https://youtu.be/yZXxVF0WGR0
 
 # Design Overview
 We implemented simple login functionality. When the user is logged in, they will have access to "My Profile" and "Logout" on the navbar at the top. "My Profile" has general user data such as username and password, and some statistics about their favorite stores and shopping lists.
