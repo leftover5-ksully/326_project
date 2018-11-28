@@ -2,12 +2,7 @@
 
 TODO: The graphs page is broken! Yay!
 
-Created in Umass Compsci 326 by:
-Mina Bruso
-Harold Rubio
-Evan Geremia
-Kiaynna Sully
-Harmon Lau
+Created in Umass Compsci 326 by: Mina Bruso, Harold Rubio, Evan Geremia, Kiaynna Sully, Harmon Lau
 
 DESCRIPTION: Down the Asile is a web application that allows users to shop a selection of stores and add items from stores to their cart. They can then checkout, get their total, and finally get a map of the store with the most effiecent path with their set of items. 
 
