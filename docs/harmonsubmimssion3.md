@@ -1,0 +1,2 @@
+I implemented the password change form in the user settings page. I spent time trying to fix the stats2.html page which broke after the update. 
+I tried to implement the checkbox forms but am still working on it. 
