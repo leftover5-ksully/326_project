@@ -53,10 +53,16 @@
 					
 					<div class="input-group mb-5">
 						<div class="col-sm-6 col-md-12 h6">Password</div>
-						<div class="input-group-prepend">
+						<!--<div class="input-group-prepend">
 							<span class="input-group-text" id="basic-addon1">Change Email</span>
-						</div>
-						<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+						</div>-->
+                        <hr>
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <input type="submit" value="Send me instructions!">
+                        </form> 
+						<!--<input type="password" class="form-control" id="inputPassword" placeholder="Password">-->
 					</div>
 					
 					

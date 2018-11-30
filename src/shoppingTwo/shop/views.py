@@ -5,6 +5,7 @@ from shop.models import Item, List, UserModel, Store
 from shop.forms import AddItemForm
 from django.views import generic
 from faker import Faker
+from django.contrib.auth.forms import PasswordChangeForm
 
 
 # Create your views here.
@@ -71,7 +72,24 @@ def user_preferences(request):
         user = request.user
         context = {"userM": userM,
                    "user": user}
-        return render(request, "user_preferences.html", context=context)
+                   
+                   
+        if request.method == 'POST':
+            form = PasswordChangeForm(request.user, request.POST)
+            if form.is_valid():
+                user = form.save()
+                update_session_auth_hash(request, user)  # Important!
+                messages.success(request, 'Your password was successfully updated!')
+                return redirect('user_preferences')
+            else:
+                messages.error(request, 'Please correct the error below.')
+        else:
+            form = PasswordChangeForm(request.user)
+        return render(request, 'user_preferences.html', {
+            'form': form
+        })    
+        
+        #return render(request, "user_preferences.html", context=context)
     return render(request, "login_error.html")
 
 def login_error(request):
