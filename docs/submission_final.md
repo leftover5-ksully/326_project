@@ -10,6 +10,39 @@ Our application "Down the Aisle" effectively will allow users to login, select t
 * Kiyanna Sully, leftover5-ksully
 * Evan Geremia, egeremia
 
+# User Interface
+## Homepage - the glue that connected the application together
+![homepage](imgs/homepage-UI.png)
+
+## Profile Page - has user settings and favorites
+![profile](imgs/profile-UI.png)
+
+## User Preferences - contains password reset and other user settings
+![user preferences](imgs/password-reset-UI.png)
+
+## Favorite Items - contains a user's favorite items
+![favorite items](imgs/favorite-item-UI.png)
+
+## Favorite Cart - contains a user's favorite cart
+![favorite cart](imgs/favorite-cart-UI.png)
+
+## Add Item to Favorites - allows a user with special permissions to add an item to their favorite items list
+![add item](imgs/add-to-faves-UI.png)
+
+## Login Error - error page if permissions or login is required to view a page
+![error](imgs/page-error-UI.png)
+
+## Add Item Success - success page to let user know the item was actually added to their favorite items list
+![add item success](imgs/success-UI.png)
+
+## Store Select - list of stores for user to shop from 
+![store select](imgs/store-select-UI.png)
+
+## Items / Cart - displays all items in store and cart so far
+![items/cart](imgs/item-cart-UI.png)
+
+## Map - the main point of the app - displays the mapped route based on the user's cart
+![map](imgs/map_screen-UI.png)
 
 
 # Design Overview
