@@ -55,9 +55,10 @@ User: A way to store a user's favorite preferences, with a one-to-one relation w
 ![model](imgs/model.PNG)
 
 # URL Routes/Mappings
+![map](imgs/urls.png)
 
 # Authentication/Authorization
-Users login through the django login interface. Once they login, they have access to the Profile Page with user-specific settings and statistics. Only some users and the admin have permission to add an item to their favorite items list, as per the user-group requirement.
+Users login through the django login interface. Once they login, they have access to the Profile Page with user-specific settings and statistics. Only some users and the admin have permission to add an item to their favorite items list, as per the user-group requirement. When the init.sh is run, there will be sample users with passwords created to login.
 
 # Team Choice
 Our team choice was a password reset. There is a link to password reset/user preferences on the user profile page. 
