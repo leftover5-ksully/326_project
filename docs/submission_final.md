@@ -43,6 +43,7 @@ Our application "Down the Aisle" effectively will allow users to login, select t
 
 ## Map - the main point of the app - displays the mapped route based on the user's cart
 ![map](imgs/map_screen-UI.png)
+![map2](imgs/Shopping Map.png)
 
 # Data Model
 Store: A place for each item to be associated with and to store a geographic location
@@ -56,6 +57,9 @@ User: A way to store a user's favorite preferences, with a one-to-one relation w
 
 # URL Routes/Mappings
 ![urls](imgs/urls.png)
+
+# Statistics
+![Stats](imgs/Stats.png)
 
 # Authentication/Authorization
 Users login through the django login interface. Once they login, they have access to the Profile Page with user-specific settings and statistics. Only some users and the admin have permission to add an item to their favorite items list, as per the user-group requirement. When the init.sh is run, there will be sample users with passwords created to login.
