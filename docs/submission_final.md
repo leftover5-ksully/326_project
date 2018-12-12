@@ -45,6 +45,8 @@ Our application "Down the Aisle" effectively will allow users to login, select t
 ![map](imgs/map_screen-UI.png)
 
 # Data Model
+Users can have many favorite items and a favorite cart with many items in it. Each item is attributed to one store. 
+![model](imgs/model.PNG)
 
 # URL Routes/Mappings
 
@@ -55,6 +57,6 @@ Users login through the django login interface. Once they login, they have acces
 Our team choice was a password reset. There is a link to password reset/user preferences on the user profile page. 
 
 # Conclusion
-Getting the data to be unique for each user was difficult to implement and get working properly. The user interatction part was also difficult and there were a lot of road blocks that presented themselves when trying to makes sure each user can modify data. It all came together in the end though and we are all sataisfied with it. In addition, we ran into some issues involving having enough time to complete what we want to complete with the break happening right before the submission. However, we were able to successfully implement what was required and have all the functionality working. A good amount of the time we felt rushed and time crunched but it worked out in the end and everyone worked well together. For the last stretch of the semester, we all will need to make sure that we will have enough time to finalize the application.
+We learned a lot about general website design, such as starting out with mock UIs and planning out data models before moving on to coding the layout and finally functionality. The greatest challenge throughout the whole process was finding time to meetup, given our schedules with other classes and holiday breaks and such. In terms of technical difficulties, it seemed that on the whole we maybe had less experience with web programming than some other groups in the class, which was a bit of a challenge but we learned a lot during the process. 
 
 
