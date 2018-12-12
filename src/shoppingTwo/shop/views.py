@@ -84,7 +84,8 @@ def user_preferences(request):
             else:
                 messages.error(request, 'Please correct the error below.')
         else:
-            form = PasswordChangeForm(request.user)
+            #form = PasswordChangeForm(request.user)
+            form = PasswordChangeForm(user)
         return render(request, 'user_preferences.html', {
             'form': form
         })    

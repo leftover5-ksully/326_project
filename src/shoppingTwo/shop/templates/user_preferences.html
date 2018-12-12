@@ -57,10 +57,10 @@
 							<span class="input-group-text" id="basic-addon1">Change Email</span>
 						</div>-->
                         <hr>
-                        <form method="POST">
+                        <form action="" method="POST">
                             {% csrf_token %}
                             {{ form.as_p }}
-                            <input type="submit" value="Send me instructions!">
+                            <input type="submit" value="Reset!">
                         </form> 
 						<!--<input type="password" class="form-control" id="inputPassword" placeholder="Password">-->
 					</div>

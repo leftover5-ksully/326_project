@@ -1,7 +1,20 @@
 {% extends "base_generic.html" %}
 
-{% block content %}
+{% block title %}
+    <title>Local Library</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <script src="https://maps.google.com/maps/api/js"></script>
+    {% load static %}
+    <script type="text/javascript" src={% static "js/maps.js" %}></script>
 
+{% endblock %}
+
+
+
+{% block content %}
     <div class="container-fluid d-flex justify-content-between">
         <div class="d-flex flex-column col-lg-3">
             {% for store in store_list %}
@@ -13,7 +26,26 @@
             <img src="{% static "images/convStore.png" %}" class="img-responsive">
         </div>
     </div>
+    <!--Section: Map2-->
+    <section class="mb-4">
 
+        <!--Card-->
+        <div class="card">
 
+            <!--Card content-->
+            <div class="card-body text-center">
 
+                <h4 class="font-up font-bold deep-purple-text mb-3"><strong>Shopping Map</strong></h4>
+
+                <!--Google map-->
+                <div id="map-container-3" class="z-depth-1" style="height: 800px"></div>
+
+            </div>
+            <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+
+    </section>
+  
 {% endblock %}
