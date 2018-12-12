@@ -45,7 +45,13 @@ Our application "Down the Aisle" effectively will allow users to login, select t
 ![map](imgs/map_screen-UI.png)
 
 # Data Model
-Users can have many favorite items and a favorite cart with many items in it. Each item is attributed to one store. 
+Store: A place for each item to be associated with and to store a geographic location
+
+Item: Added attributes that would be important for our model, such as aisles and prices, but also ones that would help each store integrate their items into our models, such as item number
+
+List: Testing out the ability to generically store many items without a many to many relation
+
+User: A way to store a user's favorite preferences, with a one-to-one relation with Django's user for authentication. We want to the user to have many favorite items and these items can be associated with many users. However, we want each user to have a unique favorite cart to be associated with them.
 ![model](imgs/model.PNG)
 
 # URL Routes/Mappings
