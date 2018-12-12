@@ -61,7 +61,7 @@ User: A way to store a user's favorite preferences, with a one-to-one relation w
 Users login through the django login interface. Once they login, they have access to the Profile Page with user-specific settings and statistics. Only some users and the admin have permission to add an item to their favorite items list, as per the user-group requirement. When the init.sh is run, there will be sample users with passwords created to login.
 
 # Team Choice
-Our team choice was a password reset. There is a link to password reset/user preferences on the user profile page. The implementation is as follows:
+Our team choice was a password reset. There is a link to password reset/user preferences on the user profile page. 
 
 # Conclusion
 We learned a lot about general website design, such as starting out with mock UIs and planning out data models before moving on to coding the layout and finally functionality. It was nice to take what we learned in class and apply it to the project. Seeing it all come together was satisfying. The greatest challenge throughout the whole process was finding time to meetup, given our schedules with other classes and holiday breaks and such. In terms of technical difficulties, it seemed that on the whole we maybe had less experience with web programming than some other groups in the class, which was a bit of a challenge but we learned a lot during the process. Overall, we are all proud of the work we accomplished this semester.
