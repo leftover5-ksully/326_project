@@ -1,28 +1,78 @@
 {% extends "base_generic.html" %}
 {% block content %}
-  <h1>{{ store }}</h1>
-  <h3>Add Items to Cart</h3>
+    <h1>{{ store }}</h1>
+    <h3>Add Items to Cart</h3>
 
-  <div style="margin-left:20px;margin-top:20px">
-    <form class="form-inline">
-       <ul>
-       <h4 style="margin:10px">All Items</h4>
-       {% for item in store.item_set.all %}
-         <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>{{item.name}} {{item.price}}</a> </button>
-       {% endfor %}
-       </ul>
-       <ul class="Cart List" style="margin:10px;">
-          <h4 style="margin:10px">Cart List</h4>
-          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Deli Meat</a> </button>
-          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Deli Cheese</a> </button>
-          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Milk</a> </button>
-          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Perscription</a> </button>
-          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Fruit</a> </button>
-          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Ice Cream</a> </button>
-          <button type="button", class="list-group-item list-group-item-action", style="margin:8px"> <a>Cereal</a> </button>
-       </ul>
-     </form>
-  </div>
-  <script src="items_cart.js"></script>
+    <div style="margin-left:20px;margin-top:20px">
+        <form class="form-inline">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card bg-light">
+                            <div class="card-body bg-muted">
+                                <h3 class="text-center">All Items</h3>
+                                <ul class="list-group list-group-flush" id="itemList">
+                                    <li class="list-group-item text-center" onclick="removeItem(this)">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <p class="lead">Item Name</p>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p class="lead">Price</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% for item in store.item_set.all %}
+                                        <li class="list-group-item text-center" onclick="removeItem(this)">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <a href="#">{{ item.name }}</a>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        ${{ item.price }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <li class="list-group-item text-center" style="margin:10px;">
+                            <h4 style="margin:10px">Current Cart</h4>
+                            <button type="button" , class="list-group-item list-group-item-action" , style="margin:8px">
+                                <a>Deli
+                                    Meat</a></button>
+                            <button type="button" , class="list-group-item list-group-item-action" , style="margin:8px">
+                                <a>Deli
+                                    Cheese</a></button>
+                            <button type="button" , class="list-group-item list-group-item-action" , style="margin:8px">
+                                <a>Milk</a>
+                            </button>
+                            <button type="button" , class="list-group-item list-group-item-action" , style="margin:8px">
+                                <a>Perscription</a>
+                            </button>
+                            <button type="button" , class="list-group-item list-group-item-action" , style="margin:8px">
+                                <a>Fruit</a>
+                            </button>
+                            <button type="button" , class="list-group-item list-group-item-action" , style="margin:8px">
+                                <a>Ice
+                                    Cream</a></button>
+                            <button type="button" , class="list-group-item list-group-item-action" , style="margin:8px">
+                                <a>Cereal</a></button>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
 
 {% endblock %}
